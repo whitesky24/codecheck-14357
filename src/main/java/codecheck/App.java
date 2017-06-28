@@ -2,9 +2,17 @@ package codecheck;
 
 public class App {
 	public static void main(String[] args) {
-		for (int i = 0, l = args.length; i < l; i++) {
-			String output = String.format("argv[%s]: %s", i, args[i]);
-			System.out.println(output);
+		 if (args.length < 1) {
+		      System.out.println("Usage: java Postfix [infix expression]\n");
+		      return;
+		    }
+		    String infixExp = args[0];
+			Calc c = new Calc();
+	
+			
+		    String postfixExp = c.postfix(infixExp);
+		    Double result = c.result(postfixExp);
+		    /* System.out.println("The postfix expression for "+ infixExp +" is " + postfixExp);*/
+		    System.out.printf(postfixExp +" = "+"%.0f",result);
+		  }
 		}
-	}
-}
