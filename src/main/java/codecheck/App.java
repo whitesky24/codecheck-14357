@@ -3,9 +3,10 @@ package codecheck;
 public class App {
 	public static void main(String[] args) {
 		 if (args.length < 1) {
-		      System.out.println("Usage: java Postfix [infix expression]\n");
+		      throw new RuntimeException("1");
 		      return;
 		    }
+		else if(args.)
 		    String infixExp = args[0];
 			Calc c = new Calc();
 	
