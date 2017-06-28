@@ -2,9 +2,10 @@ package codecheck;
 
 public class App {
 	public static void main(String[] args) {
-		 if (args.length < 1) {
-		      throw new RuntimeException("1");
+		 if (args.length < 1) {   
+			 System.out.println("Usage: java Postfix [infix expression]\n");
 		      return;
+		     
 		    }
 		else if(args.)
 		    String infixExp = args[0];
